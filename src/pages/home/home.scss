@@ -1,3 +1,12 @@
 page-home {
-
+    .background_default{margin: 0 auto; display: block;}
+    .text_block{text-align: center;display: block; text-transform: uppercase!important; margin: 30px 0px;color: #fff; font-size:20px; }
+    .page_btn{font-size: 20px;   width: 200px; margin: 0 auto; display: block;  height: 45px; }
+    .spacing_the_button{margin-top: 100px;}
+    .login_btn {
+         box-shadow: 0px 5px 0px #5fd45a;
+     }
+    .signup_btn {
+        box-shadow: 0px 5px 0px #5fd45a;
+    }
 }

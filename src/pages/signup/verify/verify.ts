@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { EmployerPage } from '../employer/employer';
+import { CandidatePage } from '../candidate/candidate';
 
 /**
  * Generated class for the VerifyPage page.
@@ -22,4 +24,13 @@ export class VerifyPage {
     console.log('ionViewDidLoad VerifyPage');
   }
 
+  // gotoEmployerPage
+  gotoEmployerPage() {
+    this.navCtrl.push(EmployerPage);
+  }
+
+  // gotoCandidatePage
+  gotoCandidatePage() {
+    this.navCtrl.push(CandidatePage);
+  }
 }
