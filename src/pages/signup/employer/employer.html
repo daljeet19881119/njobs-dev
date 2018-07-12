@@ -13,51 +13,51 @@
     <ion-list class="default_height">
         <ion-item class="input_section">
             <ion-label>Name</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input type="text" [(ngModel)]="name"></ion-input>
         </ion-item>
 
         <ion-item class="input_section">
             <ion-label>Email</ion-label>
-            <ion-input type="email"></ion-input>
+            <ion-input type="email" [(ngModel)]="email"></ion-input>
         </ion-item>
 
         <ion-item class="input_section">
             <ion-label>Mobile</ion-label>
-            <ion-input type="number"></ion-input>
+            <ion-input type="number" [(ngModel)]="mobileno"></ion-input>
         </ion-item>
 
         <ion-item class="input_section">
             <ion-label>City</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input type="text" [(ngModel)]="city"></ion-input>
         </ion-item>
 
         <ion-item class="input_section">
             <ion-label>State</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input type="text" [(ngModel)]="state"></ion-input>
         </ion-item>
 
         <ion-item class="input_section">
             <ion-label>Country</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input type="text" [(ngModel)]="country"></ion-input>
         </ion-item>
 
         <ion-item class="input_section">
             <ion-label>Company Name</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input type="text" [(ngModel)]="companyName"></ion-input>
         </ion-item>
 
         <ion-item class="input_section">
             <ion-label>Company Address</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input type="text" [(ngModel)]="companyAddress"></ion-input>
         </ion-item>
 
         <ion-item class="input_section">
             <ion-label>Company Website</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input type="text" [(ngModel)]="companyWebsite"></ion-input>
         </ion-item>
 
     </ion-list>
     <div padding>
-        <button ion-button color="purpal" round  class="page_btn  signup_btn">Signup</button>
+        <button ion-button color="purpal" round  class="page_btn  signup_btn" (click)="saveEmployer()">Signup</button>
     </div>
 </ion-content> 

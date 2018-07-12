@@ -11,6 +11,8 @@ import { VerificationPage } from '../pages/signup/verification/verification';
 import { VerifyPage } from '../pages/signup/verify/verify';
 import { CandidatePage } from '../pages/signup/candidate/candidate';
 import { EmployerPage } from '../pages/signup/employer/employer';
+import { UserProvider } from '../providers/user/user';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { EmployerPage } from '../pages/signup/employer/employer';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -39,7 +42,8 @@ import { EmployerPage } from '../pages/signup/employer/employer';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    UserProvider
   ]
 })
 export class AppModule {}

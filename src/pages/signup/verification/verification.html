@@ -12,20 +12,20 @@
         <ion-list class="default_height">
             <ion-item class="input_section">
                 <ion-label>Email</ion-label>
-                <ion-input type="email"></ion-input>
+                <ion-input type="email" [(ngModel)]="email"></ion-input>
             </ion-item>
         </ion-list>
-        <ion-list radio-group>
+        <ion-list radio-group [(ngModel)]="userRole">
             <ion-item class="input_section">
                 <ion-radio  value="employer"></ion-radio>
                 <ion-label>Looking For Employee</ion-label>
             </ion-item>
             <ion-item class="input_section">
-                <ion-radio value="employee"></ion-radio>
+                <ion-radio value="candidate"></ion-radio>
                 <ion-label>Looking For Job</ion-label>
             </ion-item>
         </ion-list>
     <div padding>
-        <button ion-button color="purpal" round  class="page_btn  signup_btn " (click)="gotoVerifyPage()">Next</button>
+        <button ion-button color="purpal" round  class="page_btn  signup_btn " (click)="sendVerficationCode()">Next</button>
     </div>
 </ion-content>

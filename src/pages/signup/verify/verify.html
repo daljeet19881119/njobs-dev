@@ -14,14 +14,14 @@
   </div>
     <ion-list class="default_height">
         <ion-item class="input_section">
-            <ion-label>Your Verification </ion-label>
-            <ion-input type="email"></ion-input>
+            <ion-label>Enter verification code</ion-label>
+            <ion-input type="number" [(ngModel)]="verificationCode"></ion-input>
         </ion-item>
       </ion-list>
     <div padding>
-        <button ion-button color="greenpurpal" round  class="page_btn  signup_btn" (click)="gotoCandidatePage()">Candidate page</button>
+        <button ion-button color="greenpurpal" round  class="page_btn  signup_btn" (click)="reSendVerficationCode()">Resend</button>
     </div>
     <div padding>
-      <button ion-button color="greenpurpal" round  class="page_btn  signup_btn" (click)="gotoEmployerPage()">Employer page</button>
+      <button ion-button color="greenpurpal" round  class="page_btn  signup_btn" (click)="verifyCode()">Next</button>
   </div>
 </ion-content> 
