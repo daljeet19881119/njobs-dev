@@ -13,6 +13,8 @@ import { CandidatePage } from '../pages/signup/candidate/candidate';
 import { EmployerPage } from '../pages/signup/employer/employer';
 import { UserProvider } from '../providers/user/user';
 import { HttpModule } from '@angular/http';
+import { LandingPage } from '../pages/landing/landing';
+import { LoginProvider } from '../providers/login/login';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { HttpModule } from '@angular/http';
     VerificationPage,
     VerifyPage,
     CandidatePage,
-    EmployerPage
+    EmployerPage,
+    LandingPage
   ],
   imports: [
     BrowserModule,
@@ -37,13 +40,15 @@ import { HttpModule } from '@angular/http';
     VerificationPage,
     VerifyPage,
     CandidatePage,
-    EmployerPage
+    EmployerPage,
+    LandingPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    UserProvider
+    UserProvider,
+    LoginProvider
   ]
 })
 export class AppModule {}

@@ -10,22 +10,38 @@
 <ion-content padding style="background-image:url('assets/imgs/background.png');  background-position: center; background-repeat: no-repeat; background-size: cover;">
   <img  width="80" height="80" src="assets/imgs/logo.png" class="background_default">
     <ion-list class="default_height">
+        <ion-row radio-group [(ngModel)]="userRole" class="user-role-row">
+            <ion-col no-padding>
+                <ion-item style="color: #999999;" class="left-border">
+                Login as
+                </ion-item>
+            </ion-col>
+            <ion-col no-padding>
+                <ion-item>
+                    <ion-label>Employer</ion-label>
+                    <ion-radio value="employer"></ion-radio>
+                </ion-item>
+            </ion-col>
+            <ion-col no-padding>
+                <ion-item class="right-border">
+                    <ion-label>Candidate</ion-label>
+                    <ion-radio value="candidate"></ion-radio>
+                </ion-item>
+            </ion-col>
+        </ion-row>
         <ion-item class="input_section">
             <ion-label>Email</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input type="text" [(ngModel)]="email"></ion-input>
         </ion-item>
         <ion-item class="input_section">
             <ion-label>Password</ion-label>
-            <ion-input type="password"></ion-input>
+            <ion-input type="password" [(ngModel)]="password"></ion-input>
         </ion-item>
-    </ion-list>
-   
-    <div padding>
-        <button ion-button color="purpal" round  class="page_btn signup_btn">Login</button>
+    </ion-list>   
+    <div>
+        <button ion-button color="purpal" round  class="page_btn signup_btn" (click)="loginUser()">Login</button>
     </div>
     <ion-label class="forget_password">
-        <a href="#">
-            <ion-icon  name="ios-arrow-round-forward"></ion-icon><span> Forget Password</span>
-        </a>
+        <ion-icon  name="ios-arrow-round-forward"></ion-icon><span> Forget Password</span>
     </ion-label>
 </ion-content>

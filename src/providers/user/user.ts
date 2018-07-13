@@ -79,7 +79,7 @@ export class UserProvider {
   }
 
   // insertCandidate
-  insertCandidate(name: string, email: string, mobileno: number, city: string, state: string, country: string, address1: string, address2) {
+  insertCandidate(name: string, email: string, mobileno: number, city: string, state: string, country: string, address1: string, address2, password: any) {
 
     // set headers
     let headers = new Headers();
@@ -97,16 +97,17 @@ export class UserProvider {
         state: state,
         country: country,
         address1: address1,
-        address2: address2
+        address2: address2,
+        password: password
     });
 
-    let url = this.siteUrl+'api/candidate/candiate/insertCandidate';
+    let url = this.siteUrl+'api/candidate/candidate/insertCandidate';
 
     return this.http.post(url, data, options).map(res => res.json());
   }
 
   // insertEmployer
-  insertEmployer(name: string, email: string, mobileno: number, city: string, state: string, country: string, companyName: string, companyAddress: string, companyWebsite: string) {
+  insertEmployer(name: string, email: string, mobileno: number, city: string, state: string, country: string, companyName: string, companyAddress: string, companyWebsite: string, password: any) {
 
     // set headers
     let headers = new Headers();
@@ -123,9 +124,10 @@ export class UserProvider {
         city: city,
         state: state,
         country: country,
-        companyName: companyName,
-        companyAddress: companyAddress,
-        companyWebsite: companyWebsite
+        company_name: companyName,
+        company_address: companyAddress,
+        company_website: companyWebsite,
+        password: password
     });
 
     let url = this.siteUrl+'api/employer/employer/insertEmployer';

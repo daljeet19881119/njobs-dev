@@ -50,6 +50,14 @@
             <ion-label>Address L2</ion-label>
             <ion-input type="text" [(ngModel)]="address2"></ion-input>
         </ion-item>
+        <ion-item class="input_section">
+            <ion-label>Password</ion-label>
+            <ion-input type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+        <ion-item class="input_section">
+            <ion-label>Confirm Password</ion-label>
+            <ion-input type="password" [(ngModel)]="cpassword"></ion-input>
+        </ion-item>
     </ion-list>
     <div padding>
         <button ion-button color="purpal" round  class="page_btn  signup_btn" (click)="saveCandidate()">Signup</button>
