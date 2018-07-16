@@ -15,6 +15,7 @@ import { UserProvider } from '../providers/user/user';
 import { HttpModule } from '@angular/http';
 import { LandingPage } from '../pages/landing/landing';
 import { LoginProvider } from '../providers/login/login';
+import { ViewJobPage } from '../pages/view-job/view-job';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { LoginProvider } from '../providers/login/login';
     VerifyPage,
     CandidatePage,
     EmployerPage,
-    LandingPage
+    LandingPage,
+    ViewJobPage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ import { LoginProvider } from '../providers/login/login';
     VerifyPage,
     CandidatePage,
     EmployerPage,
-    LandingPage
+    LandingPage,
+    ViewJobPage
   ],
   providers: [
     StatusBar,

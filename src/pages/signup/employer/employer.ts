@@ -52,7 +52,7 @@ export class EmployerPage {
       // check if msg == success
       if(data.msg == 'success')
       {
-          this.navCtrl.push(HomePage);
+          this.navCtrl.push(HomePage, {userRole: 'employer', employer_id: data.id});
           this.loader.dismiss();
       }
       if(data.msg == 'err')

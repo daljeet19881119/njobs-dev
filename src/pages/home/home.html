@@ -1,20 +1,38 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Home page</ion-title>
+    <ion-searchbar></ion-searchbar>
   </ion-navbar>
 
 </ion-header>
-<ion-content padding>
-  <h2>Welcome to Home page</h2>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>
-        Nine Inch Nails Live
-      </ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
-    </ion-card-content>
-  </ion-card>
+<ion-content padding style="background: url('assets/imgs/background.png');" class="bg-image">
+  <div class="candidate-data" *ngIf="userRole == 'candidate'">
+    <ng-container *ngIf="allJobs">
+      <ion-card *ngFor="let job of allJobs" class="job-card">
+        <ion-card-header>
+          <ion-card-title class="job-title">
+            {{ job.job_title }}
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{ job.job_desc }}
+        </ion-card-content>
+      </ion-card>
+    </ng-container>
+  </div>  
+  <div class="employer-data" *ngIf="userRole == 'employer'">
+    <ng-container *ngIf="allJobs">
+      <ion-list>
+        <ion-item *ngFor="let job of allJobs">
+          <h2>{{ job.job_title }}</h2>
+          <p>{{ job.job_desc }}</p>
+          <button ion-button clear item-end (click)="viewJob(job.job_title, job.job_desc)">View</button>
+        </ion-item>
+      </ion-list>
+    </ng-container>
+    <div class="post-job-btn" *ngIf="showBtn">
+      <h4 class="post-text">Currently you have not posted any job.</h4>
+      <button ion-button round>Post a job</button>
+    </div>
+  </div>
 </ion-content>

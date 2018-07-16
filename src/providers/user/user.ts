@@ -134,4 +134,18 @@ export class UserProvider {
 
     return this.http.post(url, data, options).map(res => res.json());
   }
+
+  // get all jobs
+  getAllJobs() {
+    let url = this.siteUrl+'api/candidate/candidate/allJobs';
+    
+    return this.http.get(url).map(res => res.json());
+  }
+
+  // fetchEmployerJobs
+  fetchEmployerJobs(employerId: number) {
+    let url = this.siteUrl+'api/employer/employer/employer_jobs?employer_id='+employerId;
+
+    return this.http.get(url).map(res => res.json());
+  }
 }

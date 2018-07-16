@@ -44,7 +44,7 @@ export class LoginPage {
           // check if msg success
           if(data.msg == 'success')
           {
-            this.navCtrl.push(HomePage);
+            this.navCtrl.push(HomePage, {userRole: this.userRole, employer_id: data.id});
             this.loader.dismiss();
           }
           if(data.msg == 'err')
