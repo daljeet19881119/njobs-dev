@@ -11,7 +11,8 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class LoginProvider {
   
-  siteUrl: string = 'http://localhost/ci/';
+  // siteUrl: string = 'http://localhost/ci/';
+  siteUrl: string = 'http://jobs.nxtut.com/';
 
   constructor(public http: Http) {
     console.log('Hello LoginProvider Provider');

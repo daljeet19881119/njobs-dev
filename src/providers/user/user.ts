@@ -11,7 +11,8 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class UserProvider {
 
-  siteUrl: string = 'http://localhost/ci/';
+  // siteUrl: string = 'http://localhost/ci/';
+  siteUrl: string = 'http://jobs.nxtut.com/';
 
   constructor(public http: Http) {
     console.log('Hello UserProvider Provider');

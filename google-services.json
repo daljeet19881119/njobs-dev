@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "709074081219",
+    "firebase_url": "https://njobs-737e8.firebaseio.com",
+    "project_id": "njobs-737e8",
+    "storage_bucket": "njobs-737e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709074081219:android:df508806b904a1b0",
+        "android_client_info": {
+          "package_name": "njobs.nxgenso.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "709074081219-r5nfovbbmgqkbu0nfskdbcduamf67h7u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK5Yh9TJ77iJhoT9mopF6U7qRI3T5UnnY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

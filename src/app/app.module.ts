@@ -16,6 +16,9 @@ import { HttpModule } from '@angular/http';
 import { LandingPage } from '../pages/landing/landing';
 import { LoginProvider } from '../providers/login/login';
 import { ViewJobPage } from '../pages/view-job/view-job';
+import { UniqueDeviceID } from '@ionic-native/unique-device-id';
+import { Push } from '@ionic-native/push';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 @NgModule({
   declarations: [
@@ -51,7 +54,10 @@ import { ViewJobPage } from '../pages/view-job/view-job';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     UserProvider,
-    LoginProvider
+    LoginProvider,
+    UniqueDeviceID,
+    Push,
+    LocalNotifications
   ]
 })
 export class AppModule {}
