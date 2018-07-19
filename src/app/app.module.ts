@@ -19,6 +19,7 @@ import { ViewJobPage } from '../pages/view-job/view-job';
 import { UniqueDeviceID } from '@ionic-native/unique-device-id';
 import { Push } from '@ionic-native/push';
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { Geolocation } from '@ionic-native/geolocation';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
     LoginProvider,
     UniqueDeviceID,
     Push,
-    LocalNotifications
+    LocalNotifications,
+    Geolocation
   ]
 })
 export class AppModule {}

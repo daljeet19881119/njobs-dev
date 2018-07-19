@@ -4,6 +4,7 @@ import { LoginPage } from '../login/login';
 import { VerificationPage } from '../signup/verification/verification';
 import { Push, PushObject, PushOptions } from '@ionic-native/push';
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { Geolocation } from '@ionic-native/geolocation';
 
 @IonicPage()
 @Component({
@@ -12,7 +13,9 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
 })
 export class LandingPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private push: Push, public alertCtrl: AlertController, public platform: Platform, private localNotifications: LocalNotifications) {
+  latlongArr: any = [];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private push: Push, public alertCtrl: AlertController, public platform: Platform, private localNotifications: LocalNotifications, private geolocation: Geolocation) {
 
       // to check if we have permission
       this.push.hasPermission()
@@ -87,7 +90,34 @@ export class LandingPage {
           data: {"id": 1, "name": "yogender"}
         });
     });
-}
+  }
+
+  // get current location lat and long
+  getCurrentLocation() {
+    this.geolocation.getCurrentPosition().then((resp) => {
+      // resp.coords.latitude      
+      // resp.coords.longitude      
+      this.locationAlert(resp.coords.latitude, resp.coords.longitude);
+
+      // push lat long to array
+      this.latlongArr.push({
+        lat: resp.coords.latitude,
+        long: resp.coords.longitude
+      });
+     }).catch((error) => {
+       console.log('Error getting location', error);
+     });
+  }
+
+  // create alert
+  locationAlert(lat: any, long: any) {
+      const alert = this.alertCtrl.create({
+            title: 'Current Location',
+            message: 'Lat: '+lat+' and long: '+long,
+            buttons: ['ok']
+      });
+      alert.present();
+  }
 
   // this function to call the signup page
   gotoSignUpPage(){
