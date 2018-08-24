@@ -1,8 +1,8 @@
 {
   "name": "njobsDev",
-  "app_id": "d872549c",
-  "type": "ionic-angular",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "type": "ionic-angular",
+  "pro_id": "d872549c"
 }

@@ -7,6 +7,7 @@
       <button ion-button color="purpal" round  class="page_btn  signup_btn " (click)="gotoSignUpPage()">Signup</button>
   </div>
   <br><br><br>
+  <h2>{{ msg }}</h2>
   <button ion-button block round (click)="getCurrentLocation()">Get Current lat and long</button>
     <ion-list *ngIf="latlongArr.length > 0">
       <ion-item *ngFor="let latlong of latlongArr">

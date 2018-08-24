@@ -14,7 +14,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 export class LandingPage {
 
   latlongArr: any = [];
-
+  msg: string;
   constructor(public navCtrl: NavController, public navParams: NavParams, private push: Push, public alertCtrl: AlertController, public platform: Platform, private localNotifications: LocalNotifications, private geolocation: Geolocation) {
 
       // to check if we have permission
@@ -57,13 +57,14 @@ export class LandingPage {
 
       pushObject.on('notification').subscribe((notification: any) => 
         {
-          const alert = this.alertCtrl.create({
+          const salert = this.alertCtrl.create({
             title: 'Njobs Notification',
             message: notification.message,
             buttons: ['ok']
           });
-          alert.present();
-          
+          this.msg = notification.message;
+          salert.present();
+          alert(JSON.stringify(notification));
           console.log('Received a notification', notification);
         }
       );
